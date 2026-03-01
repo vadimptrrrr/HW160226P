@@ -8,7 +8,7 @@ T* merge(const T* const* a, size_t sa, const size_t* sai, T* c)
   {
     while (j < sai[i])
     {
-      c[k] = a[i][j];
+      c[k] = a[i][j];           //T::operator=
       k++;
       j++;
     }
