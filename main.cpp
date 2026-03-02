@@ -59,3 +59,20 @@ T* merge(const T* const* a, size_t sa, const size_t* sai, T* c)
   }
   return c;
 }
+
+int main()
+{
+    int a1[3] = {1, 3, 5};
+    int a2[3] = {2, 4, 6};
+
+    const int* a[2] = {a1, a2};
+    size_t sa[2] = {3, 3};
+
+    int* c = new int[6];
+    c = merge(a, 2, sa, c);
+
+    for(size_t i = 0; i < 6; i++)
+        std::cout << c[i] << " ";
+
+    delete[] c;
+}
